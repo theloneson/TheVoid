@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The Void - Galactic Design System
+All colors MUST be HSL. Dark-galactic aesthetic with clean light alternative.
+*/
+
+@layer base {
+  :root {
+    /* Light Mode - Clean & Minimal */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+    --surface: 250 50% 98%;
+    --accent: 257 76% 65%;
+    --muted: 222 13% 42%;
+    
+    /* Galactic Purple System */
+    --void-primary: 257 87% 55%;
+    --void-secondary: 257 76% 65%;
+    --void-glow: 257 100% 85%;
+    
+    /* Cosmic Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(257 87% 55% / 0.15), hsl(0 0% 0% / 0.4));
+    --gradient-hero: linear-gradient(135deg, hsl(257 87% 55% / 0.8), hsl(250 87% 45% / 0.6));
+    --gradient-void: linear-gradient(180deg, hsl(257 87% 55%), hsl(280 87% 45%));
+    
+    /* Shadows & Effects */
+    --shadow-cosmic: 0 10px 30px -10px hsl(257 87% 55% / 0.3);
+    --shadow-glow: 0 0 40px hsl(257 100% 85% / 0.4);
+    --shadow-void: 0 25px 50px -12px hsl(257 87% 55% / 0.25);
+    
+    /* Animations */
+    --transition-cosmic: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Standard Theme Variables */
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+    --primary: 257 87% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 50% 96%;
+    --secondary-foreground: 222 84% 4.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 257 87% 55%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark Mode - Pure Galactic */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --surface: 240 14% 4%;
+    --accent: 257 87% 55%;
+    --muted: 0 0% 75%;
+    
+    /* Enhanced Dark Galactic */
+    --void-primary: 257 87% 65%;
+    --void-secondary: 257 76% 75%;
+    --void-glow: 257 100% 90%;
+    
+    /* Dark Cosmic Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(257 87% 55% / 0.15), hsl(0 0% 0% / 0.4));
+    --gradient-hero: linear-gradient(135deg, hsl(257 87% 65% / 0.9), hsl(250 87% 55% / 0.7));
+    --gradient-void: linear-gradient(180deg, hsl(257 87% 65%), hsl(280 87% 55%));
+    
+    /* Enhanced Dark Shadows */
+    --shadow-cosmic: 0 10px 30px -10px hsl(257 87% 55% / 0.5);
+    --shadow-glow: 0 0 60px hsl(257 100% 85% / 0.6);
+    --shadow-void: 0 25px 50px -12px hsl(257 87% 55% / 0.4);
+
+    /* Standard Dark Theme Variables */
+    --card: 240 14% 4%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 14% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 257 87% 65%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 10% 12%;
+    --input: 240 10% 12%;
+    --ring: 257 87% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* Typography System */
+  .font-heading {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  .font-display {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* Starfield Background */
+  .starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  .starfield::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: hsl(var(--void-glow));
+    border-radius: 50%;
+    animation: drift 20s linear infinite;
+    box-shadow: 
+      100px 150px 0 hsl(var(--void-glow)),
+      300px 100px 0 hsl(var(--void-glow)),
+      500px 200px 0 hsl(var(--void-glow)),
+      700px 50px 0 hsl(var(--void-glow)),
+      200px 300px 0 hsl(var(--void-glow)),
+      400px 250px 0 hsl(var(--void-glow)),
+      600px 350px 0 hsl(var(--void-glow)),
+      800px 300px 0 hsl(var(--void-glow));
+  }
+
+  @keyframes drift {
+    0% { transform: translateY(0px) translateX(0px); }
+    50% { transform: translateY(-10px) translateX(5px); }
+    100% { transform: translateY(0px) translateX(0px); }
+  }
+}
+
+@layer components {
+  /* Cosmic Button Variants */
+  .btn-cosmic {
+    @apply bg-gradient-to-r from-void-primary to-void-secondary text-white font-semibold px-8 py-3 rounded-xl;
+    @apply shadow-cosmic hover:shadow-glow transform transition-all duration-300;
+    @apply hover:scale-105 hover:brightness-110;
+    background: var(--gradient-void);
+  }
+  
+  .btn-cosmic:hover {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .btn-outline-cosmic {
+    @apply border-2 border-void-primary text-void-primary bg-transparent px-8 py-3 rounded-xl;
+    @apply hover:bg-void-primary hover:text-white transition-all duration-300;
+  }
+
+  /* Product Card Hover Effects */
+  .product-card {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-void);
+  }
+  
+  .product-card:hover .product-image {
+    transform: scale(1.06);
+  }
+  
+  .product-card:hover .product-glow {
+    opacity: 1;
+    box-shadow: 0 0 0 2px hsl(var(--void-primary) / 0.5);
+  }
+
+  /* Glowing Text Effects */
+  .text-cosmic {
+    background: var(--gradient-void);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Navigation Styles */
+  .nav-cosmic {
+    @apply backdrop-blur-md bg-background/80 border-b border-border/50;
+  }
+
+  /* Void-specific animations */
+  .animate-void-pulse {
+    animation: voidPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes voidPulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-cosmic-float {
+    animation: cosmicFloat 6s ease-in-out infinite;
+  }
+
+  @keyframes cosmicFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+}
