@@ -1,73 +1,49 @@
-# Welcome to your Lovable project
+# 🌌 The Void — E-Commerce Website
 
-## Project info
+A modern, artistic e-commerce website for **The Void**, a lifestyle and fashion brand.  
+Designed with a galactic, futuristic aesthetic and built with **React + Tailwind CSS**.  
 
-**URL**: https://lovable.dev/projects/e676c44e-6c00-4037-a331-53d11b23111a
+---
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **Dual Theme Modes**
+  - Dark Mode → black + deep purple gradients with subtle starfield animation.
+  - Light Mode → white + purple accents with clean glow effects.
+- **Responsive Layout** — works seamlessly on desktop, tablet, and mobile.
+- **Homepage**
+  - Hero section with logo, tagline (“Step Into The Void”), and glowing CTA button.
+  - Product grid/gallery with hover zoom + purple glow outline.
+- **Shop Pages**
+  - Product cards with hover animations.
+  - Product detail pages with image carousel, description, price, size/variant selector.
+  - Slide-out shopping cart with checkout summary.
+- **Checkout Flow**
+  - Minimalist checkout form for name, email, shipping, and payment method (mock).
+- **Navigation**
+  - Sticky navbar with Home | Shop | About | Contact.
+  - Theme toggle (Light/Dark).
+- **Footer**
+  - Gradient background with subtle starfield effect.
+  - Newsletter signup (“Stay in the Void”).
+  - Social media icons with glowing purple hover.
+- **Accessibility**
+  - Semantic HTML, keyboard navigation, focus states, alt text for all images.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e676c44e-6c00-4037-a331-53d11b23111a) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **React** — component-based UI.
+- **Tailwind CSS** — utility-first styling.
+- **JavaScript (ES6+)**
+- **Placeholder product data** via JSON (easy to swap with real products).
+- **Optional libraries**
+  - `framer-motion` for smooth animations.
+  - `lucide-react` for icons.
+  - `react-router-dom` for routing.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📂 Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e676c44e-6c00-4037-a331-53d11b23111a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
